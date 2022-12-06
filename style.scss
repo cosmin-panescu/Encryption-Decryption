@@ -23,10 +23,16 @@ body {
     border-radius: 10px;
     font-weight: 500;
     background-color: var(--lighter-blue);
-    border: none;
+    border: 1.5px solid var(--lighter-blue);
     outline: none;
     color: var(--darkest-blue);
     cursor: pointer;
+    transition: all .25s ease;
+
+    &:hover {
+        color: var(--lighter-blue);
+        background-color: var(--darkest-blue);
+    }
 }
 
 section {
@@ -74,6 +80,11 @@ section {
                     resize: none;
                     font-size: 1.25rem;
                     outline: none;
+                    transition: all .25s ease;
+
+                    &:focus {
+                        background-color: rgba(8, 18, 47, 0.425);
+                    }
 
                     &::placeholder {
                         font-size: 1.25rem;

@@ -22,10 +22,15 @@ body {
   border-radius: 10px;
   font-weight: 500;
   background-color: var(--lighter-blue);
-  border: none;
+  border: 1.5px solid var(--lighter-blue);
   outline: none;
   color: var(--darkest-blue);
   cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn:hover {
+  color: var(--lighter-blue);
+  background-color: var(--darkest-blue);
 }
 
 section {
@@ -71,6 +76,10 @@ section .container form .input textarea {
   resize: none;
   font-size: 1.25rem;
   outline: none;
+  transition: all 0.25s ease;
+}
+section .container form .input textarea:focus {
+  background-color: rgba(8, 18, 47, 0.425);
 }
 section .container form .input textarea::placeholder {
   font-size: 1.25rem;
