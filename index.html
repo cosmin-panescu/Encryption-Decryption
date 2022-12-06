@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Proiect BTI</title>
 </head>
@@ -14,27 +16,27 @@
     <section>
         <div class="container">
 
-            <h1 class="title">Din BINAR in TEXT</h1>
-            <button class="switch" type="button" data-type="binary">SCHIMBA</button>
+            <h1 class="title">Din BINAR în TEXT</h1>
+            <button class="switch btn" type="button" data-type="binary">SCHIMBĂ</button>
 
             <form>
-                <div id="input">
+                <div class="input">
                     <textarea name="input" id="input" cols="30" rows="10" data-type="binary"
-                        placeholder="Introduceti Codul Binar..."></textarea>
+                        placeholder='Introduceți mesajul pentru a fi decriptat...'></textarea>
                 </div>
 
-                <button type="submit">
-                    Converteste
+                <button type="submit" class="convert btn">
+                    DECRIPTEAZĂ
                 </button>
 
                 <div id="output">
-                    Text output...
                 </div>
             </form>
 
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

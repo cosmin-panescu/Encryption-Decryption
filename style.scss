@@ -1,28 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --darkest-blue: #08122F;
+    --lighter-blue: #BBD4FF;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    padding: 7px;
+    font-size: 1.05rem;
+    margin-bottom: 4.25px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: var(--lighter-blue);
+    border: none;
+    outline: none;
+    color: var(--darkest-blue);
+    cursor: pointer;
 }
 
 section {
     min-height: 100vh;
-    width: 100%;
-    text-align: center;
+    width: 100vw;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    background: gray;
+    // background: var(--darkest-blue);
+    background: rgb(12, 27, 70);
+    background: radial-gradient(circle, rgba(12, 27, 70, 1) 0%, rgba(8, 18, 47, 1) 76%);
 
     .container {
-        width: 90%;
+        height: 100%;
+        width: 85vw;
         max-width: 600px;
         margin: 0 auto;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
 
         .title {
-            color: #fff;
-            font-size: 40px;
+            color: var(--lighter-blue);
+            font-size: 2.5rem;
             text-align: center;
+            margin-bottom: 1.5rem;
         }
 
         form {
@@ -32,24 +65,50 @@ section {
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            gap: .5rem;
 
-            #input {
+            .input {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
+
+                textarea {
+                    resize: none;
+                    font-size: 1.25rem;
+                    outline: none;
+
+                    &::placeholder {
+                        font-size: 1.25rem;
+                        color: var(--lighter-blue);
+                    }
+                }
             }
 
             textarea,
             #output {
                 width: 100%;
-                min-height: 200px;
-                background-color: rgb(0, 0, 0);
+                height: 150px;
+                background-color: var(--darkest-blue);
                 text-align: left;
-                padding: 10px;
-                color: rgb(255, 255, 255);
+                padding: 15px;
+                font-family: 'Roboto', sans-serif;
+                color: var(--lighter-blue);
+                border-radius: 20px;
+                border: 1.5px solid var(--lighter-blue);
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+
+                    &-thumb {
+                        background-image: linear-gradient(transparent, var(--lighter-blue));
+                        border-radius: 6px;
+                    }
+                }
             }
+
+            #output {
+                font-size: 1.25rem;
+            }
+
         }
     }
 }
