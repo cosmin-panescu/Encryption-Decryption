@@ -30,6 +30,7 @@ switchEl.addEventListener('click', e => {
         inputEl.setAttribute('placeholder', 'Introduceți mesajul pentru a fi decriptat...');
         title.innerText = "Din BINAR în TEXT";
         convertEl.innerText = 'DECRIPTEAZĂ';
+        outputEl.innerText = "";
     }
 })
 
