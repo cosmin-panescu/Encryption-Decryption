@@ -21,15 +21,15 @@ switchEl.addEventListener('click', e => {
     if (type === 'binary') {
         e.target.setAttribute('data-type', 'text');
         inputEl.setAttribute('data-type', 'text');
-        inputEl.setAttribute('placeholder', 'Introduceți mesajul pentru a fi criptat...');
-        title.innerText = "Din TEXT în BINAR";
-        convertEl.innerText = 'CRIPTEAZĂ';
+        inputEl.setAttribute('placeholder', 'Enter the message to be encrypted...');
+        title.innerText = "From TEXT to BINARY";
+        convertEl.innerText = 'ENCRYPT';
     } else if (type === 'text') {
         e.target.setAttribute('data-type', 'binary');
         inputEl.setAttribute('data-type', 'binary');
-        inputEl.setAttribute('placeholder', 'Introduceți mesajul pentru a fi decriptat...');
-        title.innerText = "Din BINAR în TEXT";
-        convertEl.innerText = 'DECRIPTEAZĂ';
+        inputEl.setAttribute('placeholder', 'Enter the message to be decrypted...');
+        title.innerText = "From BINARY to TEXT";
+        convertEl.innerText = 'DECRYPT';
         outputEl.innerText = "";
     }
 })
@@ -49,7 +49,7 @@ function convert(type, value) {
 function binarInText(input) {
     let output = '';
     output = input
-        .split(' ') // luam fiecare numar cod binar
+        .split(' ') // take every binary number
         .map(number => parseInt(number, 2))
         .map(number => String.fromCharCode(number))
         .join('');
@@ -60,7 +60,7 @@ function binarInText(input) {
 function textInBinar(input) {
     let output = '';
     output = input
-        .split('') // luam fiecare caracter
+        .split('') // take every character
         .map(letter => letter.charCodeAt(0))
         .map(letter => letter.toString(2))
         .join(' ');
